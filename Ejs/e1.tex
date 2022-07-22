@@ -2,5 +2,50 @@
         2&-1&0\\-1&2&-1\\0&-1&2
     \end{pmatrix}\]Probar que $2,2+\sqrt{2}$ y $2-\sqrt{2}$ son autovalores de $A$ y hallar los autovectores correspondientes.
     \begin{mdframed}[style=s]
-        
+        Para que un escalar $\lambda$ sea autovalor de $A$ se debe cumplir\[Av=\lambda v\quad v\neq 0\]
+        Como me pide comprobar, bastaría con chequear la igualdad, pero en caso de querer encontrarlos, podemos pensar que\[Av-\lambda v=0\to (A-\lambda I)v=0\to A-\lambda I=0\to det(A-\lambda I)=0\]
+        Osea que tendríamos que calcular ese determinante, igualarlo a 0 y encontrar para qué valores de $\lambda$ se satisface la ecuación.
+        \begin{itemize}
+            \item $\lambda_1=2$
+                \begin{center}
+                    $\begin{pmatrix}
+                        2&-1&0\\-1&2&-1\\0&-1&2
+                    \end{pmatrix}v=2v\to \begin{pmatrix}
+                        2x-y\\-x+2y-z\\-y+2z
+                    \end{pmatrix}=\begin{pmatrix}
+                        2x\\2y\\2z
+                    \end{pmatrix}\to x=-z,y=0$
+                \end{center}
+                Los $v=(x,0,-x)=x(1,0,-1)$ son los autovectores asociados al autovalor $2$.
+            \item $\lambda_2=2+\sqrt{2}$
+                \begin{center}
+                    $\begin{pmatrix}
+                        2&-1&0\\-1&2&-1\\0&-1&2
+                    \end{pmatrix}v=(2+\sqrt{2})v\to \begin{pmatrix}
+                        2x-y\\-x+2y-z\\-y+2z
+                    \end{pmatrix}=\begin{pmatrix}
+                        (2+\sqrt{2})x\\(2+\sqrt{2})y\\(2+\sqrt{2})z
+                    \end{pmatrix}\to y=-\sqrt{2}x,z=x$
+                \end{center}
+                Los $v=(x,-\sqrt{2}x,x)=x(1,-\sqrt{2},1)$ son los autovectores asociados a $\lambda_2$.
+            \item $\lambda_3=2-\sqrt{2}$
+                \begin{center}
+                    $\begin{pmatrix}
+                        2&-1&0\\-1&2&-1\\0&-1&2
+                    \end{pmatrix}v=(2-\sqrt{2})v\to \begin{pmatrix}
+                        2x-y\\-x+2y-z\\-y+2z
+                    \end{pmatrix}=\begin{pmatrix}
+                        (2-\sqrt{2})x\\(2-\sqrt{2})y\\(2-\sqrt{2})z
+                    \end{pmatrix}\to y=\sqrt{2}x,z=x$
+                \end{center}
+                Los $v=(x,\sqrt{2}x,x)=x(1,\sqrt{2},1)$ son los autovectores asociados a $\lambda_3$.
+        \end{itemize}
+        En caso de haber querido encontrar los autovalores de cero:
+        \begin{center}
+            $det(A-\lambda I)=\begin{vmatrix}
+                2-\lambda&-1&0\\-1&2-\lambda&-1\\0&-1&2-\lambda
+            \end{vmatrix}=(2-\lambda)[(2-\lambda)^2-1]+[-1(2-\lambda)]$
+        \end{center}
+        Operando, se llega a\[det(A-\lambda I)=(2-\lambda)(2-\sqrt{2}-\lambda)(2+\sqrt{2}-\lambda)\]
+        Se puede llegar al mismo resultado calculando $det(\lambda I-A)$, que quizás está mejor para visualizar el polinomio característico como estamos acostumbrados, obteniendo\[det(\lambda I-A)=(\lambda-2)(\lambda-2-\sqrt{2})(\lambda-2+\sqrt{2})\]
     \end{mdframed}
