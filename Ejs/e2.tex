@@ -1,4 +1,9 @@
 \item Sea $A\in\K^{n\times n}$ una matriz inversible ¿Puede ser $\lambda=0$ un autovalor de $A$? Probar que si $\lambda$ es un autovalor de $A$, entonces $\lambda^{-1}$ es autovalor de $A^{-1}$ y además los autoespacios asociados a $\lambda$ y $\lambda^{-1}$ pertenecientes a $A$ y $A^{-1}$ respectivamente, coinciden.
     \begin{mdframed}[style=s]
-        
+        Si $\lambda=0$ es autovalor $Av=0\to A^{-1}Av=0\to v=0$. Esto contradice la definición de autovalor, ya que $v\neq 0$. Por lo tanto, $\lambda$ no puede ser $0$.\\
+        Si $\lambda$ es autovalor de $A\to Av=\lambda v\to A^{-1}Av=A^{-1}\lambda v\to Iv=\lambda A^{-1}v\to \frac{1}{\lambda}Iv=A^{-1}v\to \lambda^{-1}$ es autovalor de $A^{-1}$.\\
+        Los autoespacios asociados a $\lambda$ y $\lambda^{-1}$ son\[E(\lambda)=N(A-\lambda I)\qquad E(\lambda^{-1})=N(A^{-1}-\lambda^{-1}I)\]
+        Los vectores $v$ del autoespacio asociado a $\lambda$ cumplen\[(A-\lambda I)v=0\to Av=\lambda Iv\to Av=\lambda v\]
+        Es decir, los vectores del autoespacio, son los autovectores. Por otra parte, los vectores $w$ del autoespacio asociado a $\lambda^{-1}$ cumplen\[(A^{-1}-\lambda^{-1} I)w=0\to A^{-1}w=\lambda^{-1} Iw\to A^{-1}w=\lambda^{-1} w\to w=\lambda^{-1}Aw\to Aw=\lambda w\]
+        que es exactamente la misma condición de los elementos del autoespacio asociado a $\lambda$, con lo cual estos coinciden.
     \end{mdframed}
