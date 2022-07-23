@@ -1,14 +1,41 @@
 \item \begin{enumerate}
         \item Construir una matriz $A\in\R^{2\times2}$ que tenga un sólo autovalor.
             \begin{mdframed}[style=s]
-                
+                Si pensamos a $A$ como la representación matricial de una transforamción lineal $T:\R^2\to\R^2$, entonces las direcciones en las cuales los vectores son escalados, deben serlo en un mismo factor.
+                \[T(1,0)=(\lambda,0)\quad T(0,1)=(0,\lambda)\]
+                Cuya representación matricial en la base canónica es
+                \[[T]_\E=\begin{pmatrix}
+                    \lambda&0\\0&\lambda
+                \end{pmatrix}\]
+                Esta matriz, como se vio en el ejercicio 3, tiene un único autovalor: $\lambda$.
             \end{mdframed}
         \item Construir una matriz $A\in\R^{2\times2}$ que tenga un sólo autovalor con un autoespacio asociado de dimensión 1.
             \begin{mdframed}[style=s]
-                
+                El autoespacio asociado a un autovalor está conformado por los autovectores asociados. Al ser de dimensión 1, éste debe ser una recta que contenga al origen. Sólo los vectores de esa recta van a ser escalados por un cierto $\lambda$. Propongo:
+                \[T(1,0)=(\lambda,0)\quad T(0,1)=(\alpha,\beta)\]
+                Cuya representación matricial en la base canónica es
+                \[[T]_\E=\begin{pmatrix}
+                    \lambda&\alpha\\0&\beta
+                \end{pmatrix}\]
+                Como pide un único autovalor, $\beta=\lambda$. Para que el autoespacio sea de dimensión 1:
+                \[E(\lambda):\begin{pmatrix}
+                    0&\alpha\\0&0
+                \end{pmatrix}\begin{pmatrix}
+                    x\\y
+                \end{pmatrix}=\begin{pmatrix}
+                    0\\0
+                \end{pmatrix}\to \alpha y=0\]
+                Si $\alpha=0$ el autoespacio será $\R^2$, mientras que si $\alpha\neq0\to E(\lambda)=\overline{\{(1,0)\}}$. Por lo tanto,
+                \[A=\begin{pmatrix}
+                    \lambda&\alpha\\0&\lambda
+                \end{pmatrix}\quad \alpha\neq0\]
             \end{mdframed}
         \item Contruir una matriz $A\in\R^{2\times2}$ que no tenga autovalores. ¿Puede hacer lo mismo para una matriz de $\C^{2\times2}$?
             \begin{mdframed}[style=s]
-                
+                Se puede proponer la rotación presentado en la Práctica 2:
+                \[[R_\frac{\pi}{2}]_\E=\begin{pmatrix}
+                    0&-1\\1&0
+                \end{pmatrix}\]
+                La misma no tiene autovalores en $\R$. No puede hacerse lo mismo con matrices de $\C^{2\times2}$ ya que siempre existirán raíces complejas para el polinomio característico.
             \end{mdframed}
     \end{enumerate}

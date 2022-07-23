@@ -1,4 +1,59 @@
 \item Considerar las transformaciones lineales $R_\frac{\pi}{2},S_Y,H_2$ y $P_X$ del ejercicio 11 de la práctica 2. Hallar los autovalores, autovectores y autoespacios asociados. ¿Es alguna de ellas diagonalizable?
     \begin{mdframed}[style=s]
-        
+        \begin{itemize}
+            \item $R_\frac{\pi}{2}$\\
+                La representación matricial en la base canónica fue presentada en el ejercicio anterior:
+                \[A=\begin{pmatrix}
+                    0&-1\\1&0
+                \end{pmatrix}\]
+                La misma no tiene autovalores, con lo cual tampoco tendrá autovectores, ni autoespacios y tampoco será diagonalizable ya que no existe una base de $\R^2$ formada por autovectores.
+            \item $S_Y$\\
+                Tenemos que
+                \[A=\begin{pmatrix}
+                    -1&0\\0&1
+                \end{pmatrix}\]
+                Como es una matriz triangular, los autovalores son $\lambda_1=-1$ y $\lambda_2=1$. Para hallar los autoespacios asociados:\[\begin{cases}
+                    E(-1):\begin{pmatrix}
+                        0&0\\0&2
+                    \end{pmatrix}\begin{pmatrix}
+                        x\\y
+                    \end{pmatrix}=\begin{pmatrix}
+                        0\\0
+                    \end{pmatrix}\to y=0\to E(-1)=\overline{\{(1,0)\}}\\
+                    E(1):\begin{pmatrix}
+                        -2&0\\0&0
+                    \end{pmatrix}\begin{pmatrix}
+                        x\\y
+                    \end{pmatrix}=\begin{pmatrix}
+                        0\\0
+                    \end{pmatrix}\to x=0\to E(1)=\overline{\{(0,1)\}}\\
+                \end{cases}\]
+                Por lo tanto, los autovectores asociados a $\lambda_1=-1$ son de la forma $(x,0)$, mientras que $(0,y)$ son los asociados a $\lambda_2=1$. Como $\{(1,0)(0,1)\}$ son base de $\R^2$, entonces $S_Y$ es diagonalizable.
+            \item $H_2$
+                \[A=\begin{pmatrix}
+                    2&0\\0&2
+                \end{pmatrix}\]
+                Del ejercicio 5b, se sabe que tiene como autovalor a $\lambda=2$ y $E(2)=\R^2$, los autovalores son todos los vectores de $\R^2$ y como ya es una matriz diagonal, es diagonalizable.
+            \item $P_X$
+                \[A=\begin{pmatrix}
+                    1&0\\0&0
+                \end{pmatrix}\]
+                Los autovalores son $\lambda_1=1$ y $\lambda_2=0$. Para los autoespacios y autovectores:\[\begin{cases}
+                    E(1):\begin{pmatrix}
+                        0&0\\0&-1
+                    \end{pmatrix}\begin{pmatrix}
+                        x\\y
+                    \end{pmatrix}\begin{pmatrix}
+                        0\\0
+                    \end{pmatrix}&\to y=0\to E(1)=\overline{\{(1,0)\}}\\
+                    E(0):\begin{pmatrix}
+                        1&0\\0&0
+                    \end{pmatrix}\begin{pmatrix}
+                        x\\y
+                    \end{pmatrix}\begin{pmatrix}
+                        0\\0
+                    \end{pmatrix}&\to x=0\to E(0)=\overline{\{(0,1)\}}
+                \end{cases}\]
+                Es diagonalizable.
+        \end{itemize}
     \end{mdframed}
