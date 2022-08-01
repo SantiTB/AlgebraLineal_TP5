@@ -2,12 +2,20 @@
         0&-2&1\\1&0&0\\0&0&1
     \end{pmatrix}\]
     \begin{enumerate}
-        \item Hallar el polinomio minimal de $A$ considerando los coeficientes en $\C$, en $\R$ y en $\Z_3$.
+        \item Hallar el polinomio minimal de $A$ considerando los coeficientes en $\C$, en $\R$ y en $\Z_3$.\pagebreak
             \begin{mdframed}[style=s]
-                
+                Como el minimal tiene las mismas raíces que el polinomio característico, empiezo calculando éste último
+                \[p_A(\lambda)=det(\lambda I-A)=\begin{vmatrix}
+                    \lambda&2&-1\\-1&\lambda&0\\0&0&\lambda-1
+                \end{vmatrix}=(\lambda-1)\begin{vmatrix}
+                    \lambda&2\\-1&\lambda
+                \end{vmatrix}=(\lambda-1)(\lambda^2+2)\]
+                Para $\C$: $p_A(\lambda)=(\lambda-1)(\lambda-2i)(\lambda+2i)\to m_A(\lambda)=p_A(\lambda)$.\\
+                En el caso de $\R$, recordando que el minimal divide al característico y comparte raíces, concluimos que hay 2 posibilidades \[m_A(\lambda)=p_A(\lambda),\quad m_A(\lambda)=(\lambda-1)\]
+                Sin embargo, $(\lambda-1)$ no anula a $A$, con lo cual $m_A(\lambda)=p_A(\lambda)$.
             \end{mdframed}
         \item Decir en cada caso si $A$ es diagonalizable.
             \begin{mdframed}[style=s]
-                
+                Por el \textbf{Teorema 4.41} en $\C$ es diagonalizable, mientras que en $\R$ no.
             \end{mdframed}
     \end{enumerate}
